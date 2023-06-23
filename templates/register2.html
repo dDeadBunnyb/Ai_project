@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta name="viewport" content="width=device-width,initial-scale=1" charset="UTF-8">
+    <script src="../static/js/check.js"></script>
+    <link rel="stylesheet" href="../static/css/main.css">
+    <title>식비</title>
+</head>
+<body>
+<header>
+  <h1>회원가입</h1>
+</header>
+<form action="/register" method="post" onsubmit="return hasCheck()">
+    <div><h1>해당사항이 있습니까?</h1></div>
+    <div class = 'invalid-note' id = 'calle'>하나 이상  입력해 주세요</div>
+    <div>당뇨<input type="radio" name = "condition" value="diabetes"></div>
+    <div>식품 알레르기<input type="radio" id = "allergy" name = "condition" value="allergy"></div>
+    <div>
+        <div><input type="text" name="alle" id = "stalle"></div>
+        <div><input type="text" name="alle1" id = "ndalle"></div>
+        <div><input type="text" name="alle2" id = "rdalle"></div>
+    </div>
+    <div>임산부<input type="radio"  name = "condition" value = "pregnant"></div>
+    <div>해당사항없음<input type="radio" name = "condition" value="None" checked></div>
+    <div><input type="submit" value="회원가입 완료"></div>
+</form>
+<footer>
+<!--  <input type="button" value="나의 기록에 저장" onclick="location.href='/log'">-->
+  <div>
+    <input type="image" src="../static/img/smile.png" value="😃">
+    <input type="image" src="../static/img/pngwing.com.png" value="홈으로" onclick="location.href='/main'">
+    <input type="image" src="../static/img/back-arrow.png" value="뒤로" onclick="history.back()">
+  </div>
+</footer>
+<script src="http://code.jquery.com/jquery-latest.js"></script>
+<script>
+    $('document').ready(function ()
+    {
+        $('input:text').prop('disabled', true);
+        $('input[name="condition"]').change(function ()
+        {
+            if($('#allergy').is(':checked'))
+            {
+                $('input:text').prop('disabled', false);
+            }
+            else
+            {
+                $('input:text').prop('disabled', true);
+            }
+         });
+    });
+</script>
+</body>
+</html>

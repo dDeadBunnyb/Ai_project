@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta name="viewport" content="width=device-width,initial-scale=1" charset="UTF-8">
+    <script src="../static/js/check.js"></script>
+    <link rel="stylesheet" href="../static/css/main.css">
+    <title>식비</title>
+</head>
+<body>
+<header>
+  <h1>회원가입</h1>
+</header>
+<form action="/register" method="post" onsubmit="return regiC()">
+    <div class = 'invalid-note' id = 'yid'>사용할 수 있는 아이디 입니다.</div>
+    <div class = 'invalid-note' id = 'nid'>다른 아이디를 사용해 주세요.</div>
+    <div class = 'invalid-note' id = 'cid'>중복확인 해 주세요.</div>
+    <div class = "invalid-note" id = "checkpwc">비밀번호를 확인해 주세요</div>
+    <div class = "invalid-note" id = "checkema">이메일을 확인해 주세요</div>
+    <div>
+        <input type="text" placeholder="아이디" id = 'id' name = "id">
+        <div><button type="button" onclick="idCheck()">ID 중복 확인</button></div>
+    </div>
+    <div><input type="password" placeholder="비밀번호" id = 'pw' name = "pw"></div>
+    <div>
+        <input type="password" placeholder="비밀번호 확인" id = 'pwc' name = "pwc">
+    </div>
+    <div><input type="text" placeholder="이메일" id = 'email' name = "email"></div>
+<!--    <div><input type="submit" value="NEXT" onclick="location.href='/register1'"></div>-->
+    <div><input type="submit" value="다음 >"></div>
+    <input type="hidden" value=" {{ ids }}" id = "ids">
+</form>
+<footer>
+<!--  <input type="button" value="나의 기록에 저장" onclick="location.href='/log'">-->
+  <div>
+    <input type="image" src="../static/img/smile.png" value="😃">
+    <input type="image" src="../static/img/pngwing.com.png" value="홈으로" onclick="location.href='/main'">
+    <input type="image" src="../static/img/back-arrow.png" value="뒤로" onclick="history.back()">
+  </div>
+</footer>
+</body>
+</html>

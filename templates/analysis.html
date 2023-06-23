@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta name="viewport" content="width=device-width,initial-scale=1" charset="UTF-8">
+  <link rel="stylesheet" href="../static/css/main.css">
+  <title>식비</title>
+  <style>
+    div
+    {
+        text-align:center;
+    }
+    </style>
+</head>
+<body>
+<header>
+  <h1>재료 분석</h1>
+</header>
+<form>
+  <div><img src= "data:{{mimetype}};base64, {{ img }}" style="width:266.6px; height:266.6px;"></div>
+  <div><button>분석완료</button></div>
+  <div style="width:266.6px; margin:0 auto; border:1px solid;">
+    <h1>{{result.0}}</h1>
+    분석 정확도 : {{result.1}}<br>
+    {% for key, value in sub.items() %}
+      {{key}} : {{value}}<br>
+    {% endfor %}
+  </div>
+  <div>
+    <input type="button" value="기록에 저장하기" onclick="location.href = '/savelog'">
+    <input type="button" value="식단 추천" onclick="location.href = '/recom'">
+  </div>
+  <footer>
+  <!--  <input type="button" value="나의 기록에 저장" onclick="location.href='/log'">-->
+    <div>
+      <input type="image" src="../static/img/smile.png" value="😃">
+      <input type="image" src="../static/img/pngwing.com.png" value="홈으로" onclick="location.href='/main'">
+      <input type="image" src="../static/img/back-arrow.png" value="뒤로" onclick="history.back()">
+    </div>
+  </footer>
+  </form>
+</body>
+</html>

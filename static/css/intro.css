@@ -1,0 +1,192 @@
+*
+{
+    margin: 0;
+    padding: 0;
+}
+
+#login
+{
+    padding: 0 20px;
+    border-radius: 15px;
+    background: white;
+    display: block;
+    margin: auto;
+    width: 300px;
+    height:200px;
+    text-align: justify;
+}
+
+.text
+{
+    margin-top: 20px;
+    margin-left: 20px;
+    word-spacing: 10px;
+    float: left;
+    font-size: 25px;
+    font-weight: bold;
+}
+
+.input
+{
+    margin-left: 10px;
+    border: 2px solid;
+    border-radius: 10px;
+    height: 40px;
+    margin-top: 10px;
+}
+
+section
+{
+    position: fiex;
+    width: 100%;
+    min-height: 100vh;
+    /*height: calc(var(--vh, 1vh) * 100);*/
+    background: #f6eeec;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+}
+
+section img
+{
+    width: 60%;
+}
+
+header
+{
+    position:fixed;
+    top:0;
+    width:100%;
+    height: 7vh;
+    text-align:center;
+    z-index: 1;
+}
+
+footer
+{
+    position:fixed;
+    width:100%; bottom:0; margin:0 auto;
+    text-align:center;
+    height: 7vh;
+}
+
+header .wave
+{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100px;
+    background: url("../img/wave.png");
+    background-size: 1000px 100px;
+}
+
+footer .wave
+{
+    position: absolute;
+    left: 0;
+    width: 100%;
+    height: 100px;
+    background: url("../img/wave.png");
+    background-size: 1000px 100px;
+}
+
+footer .wave.wave1
+{
+    animation: animate 30s linear infinite;
+    z-index: 1000;
+    opacity: 1;
+    animation-delay: 0s;
+    bottom: 0;
+}
+
+footer .wave.wave2
+{
+    animation: animate2 15s linear infinite;
+    z-index: 999;
+    opacity: 0.5;
+    animation-delay: -5s;
+    bottom: 10px;
+}
+
+footer .wave.wave3
+{
+    animation: animate 30s linear infinite;
+    z-index: 998;
+    opacity: 0.2;
+    animation-delay: -2s;
+    bottom: 15px;
+}
+
+footer .wave.wave4
+{
+    animation: animate2 5s linear infinite;
+    z-index: 997;
+    opacity: 0.7;
+    animation-delay: -5s;
+    bottom: 20px;
+}
+
+header .wave.top-wave1
+{
+    animation: animate 30s linear infinite;
+    z-index: 1000;
+    opacity: 1;
+    animation-delay: 0s;
+    top: 0;
+    transform: rotate(180deg);
+}
+
+header .wave.top-wave2
+{
+    animation: animate2 15s linear infinite;
+    z-index: 999;
+    opacity: 0.5;
+    animation-delay: -5s;
+    top: 10px;
+    transform: rotate(180deg);
+}
+
+header .wave.top-wave3
+{
+    animation: animate 30s linear infinite;
+    z-index: 998;
+    opacity: 0.2;
+    animation-delay: -2s;
+    top: 15px;
+    transform: rotate(180deg);
+}
+
+header .wave.top-wave4
+{
+    animation: animate2 5s linear infinite;
+    z-index: 997;
+    opacity: 0.7;
+    animation-delay: -5s;
+    top: 20px;
+    transform: rotate(180deg);
+}
+
+@keyframes animate
+{
+    0%
+    {
+        background-position-x: 0;
+    }
+    100%
+    {
+        background-position-x: 1000px;
+    }
+}
+
+@keyframes animate2
+{
+    0%
+    {
+        background-position-x: 0;
+    }
+    100%
+    {
+        background-position-x: -1000px;
+    }
+}

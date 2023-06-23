@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta name="viewport" content="width=device-width,initial-scale=1" charset="UTF-8">
+    <script src="../static/js/check.js"></script>
+    <link rel="stylesheet" href="../static/css/main.css">
+    <title>식비</title>
+</head>
+<body>
+<header>
+    <h1>비밀번호 변경</h1>
+</header>
+<form action="/changepw" method="post" onsubmit="return changepw()">
+    <div class = 'invalid-note' id = 'mt'>빈칸을 채워주세요</div>
+    <div class = 'invalid-note' id = 'cpw'>비밀번호가 맞지 않습니다.</div>
+    <div><input type="password" id = "ppw" name="ppw" placeholder="현재 비밀번호"></div>
+    <div><input type="password" id = "npw" name="npw" placeholder="새 비밀번호"></div>
+    <div><input type="password" id="npwc" name="npwc" placeholder="새 비밀번호 확인"></div>
+    <div><input type="submit" value="비밀번호 변경"></div>
+</form>
+<footer>
+<!--  <input type="button" value="나의 기록에 저장" onclick="location.href='/log'">-->
+  <div>
+    <input type="image" src="../static/img/smile.png" value="😃">
+    <input type="image" src="../static/img/pngwing.com.png" value="홈으로" onclick="location.href='/main'">
+    <input type="image" src="../static/img/back-arrow.png" value="뒤로" onclick="history.back()">
+  </div>
+</footer>
+</body>
+</html>

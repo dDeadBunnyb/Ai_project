@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta name="viewport" content="width=device-width,initial-scale=1" charset="UTF-8">
+    <script src="../static/js/check.js"></script>
+    <link rel="stylesheet" href="../static/css/main.css">
+    <title>식비</title>
+</head>
+<body>
+<header>
+  <h1>회원가입</h1>
+</header>
+<form action="/register" method="post" onsubmit="return regiC2()">
+    <div class = 'invalid-note' id = 'cgender'>성별을 입력해 주세요</div>
+    <div class = 'invalid-note' id = 'cname'>이름을 입력해 주세요.</div>
+    <div class = 'invalid-note' id = 'cage'>나이를 확인해 주세요..</div>
+    <div class = "invalid-note" id = "cheight">키를 확인해 주세요</div>
+    <div class = "invalid-note" id = "cweight">몸무게를 확인해 주세요</div>
+    <div><input type="radio" id = 'gender' name="gender" value= "남">남 <input type="radio" name="gender" value="여">여 </div>
+    <div><input type="text" placeholder="이름" id = 'name' name = "name"></div>
+    <div><input type="text" placeholder="나이(숫자만 들어갑니다)" id = 'age' name = "age"></div>
+    <div><input type="text" placeholder="키(숫자만 들어갑니다)" id = "height" name = "height"></div>
+    <div><input type="text" placeholder="몸무게(숫자만 들어갑니다)" id = "weight" name = "weight"></div>
+    <div><input type="text" placeholder="허리둘레(숫자만 들어갑니다)" id = "belly" name = "belly"></div>
+
+    <div><h3>어떠한 활동을 하시나요?</h3></div>
+    <div><input type="range" name="exer" min="25" max="40" step="1" value="25" oninput="exercise(this.value)"></div>
+    <div><output id="exerindex">25</output></div>
+    <div><output id="exertext">가벼운 활동(사무실에서 일보기)</output></div>
+
+    <div><input type="submit" value="다음 >"></div>
+</form>
+<footer>
+<!--  <input type="button" value="나의 기록에 저장" onclick="location.href='/log'">-->
+  <div>
+    <input type="image" src="../static/img/smile.png" value="😃">
+    <input type="image" src="../static/img/pngwing.com.png" value="홈으로" onclick="location.href='/main'">
+    <input type="image" src="../static/img/back-arrow.png" value="뒤로" onclick="history.back()">
+  </div>
+</footer>
+</body>
+</html>

@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta name="viewport" content="width=device-width,initial-scale=1" charset="UTF-8">
+    <link rel="stylesheet" href="../static/css/main.css">
+    <title>식비</title>
+    <style>
+    div
+    {
+        text-align:center;
+    }
+    </style>
+</head>
+<body>
+<header>
+    <h1>마이 페이지</h1>
+</header>
+<div>
+    {{login.user_name}} 님<br>
+    즐거운 하루 되세요!
+</div>
+<div style="border:1px dotted;">
+    <a href="/changeinfo"><h3>회원정보 수정</h3></a>
+    <a href="/preCondi"><h3>건강상태 보기</h3></a>
+    <a href="/changepw"><h3>비밀번호 수정</h3></a>
+    <h3>나의 기록</h3>
+    <ul style="list-style:none;">
+        <li><a href="/log">나의 음식</a></li>
+        <li><a href="/log">나의 식단</a></li>
+        <li><a href="/log">식단 추천</a></li>
+</ul>
+</div>
+<footer>
+<!--  <input type="button" value="나의 기록에 저장" onclick="location.href='/log'">-->
+  <div>
+    <input type="image" src="../static/img/smile.png" value="😃">
+    <input type="image" src="../static/img/pngwing.com.png" value="홈으로" onclick="location.href='/main'">
+    <input type="image" src="../static/img/back-arrow.png" value="뒤로" onclick="history.back()">
+  </div>
+</footer>
+</body>
+</html>

@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta name="viewport" content="width=device-width,initial-scale=1" charset="UTF-8">
+  <link rel="stylesheet" href="../static/css/main.css">
+  <title>식비</title>
+  <style>
+    div
+    {
+        text-align:center;
+    }
+    </style>
+</head>
+<body>
+<header>
+    <h1>나의 기록</h1>
+</header>
+<div style="height: 100px;">
+  <input type="text">
+</div>
+{% for log in logs %}
+  <div style="float:left; margin-left:70px; width:30%; height:200px; border:1px solid;">
+    {{log['dish_name']}}<br>
+  </div>
+{% endfor %}
+<footer>
+<!--  <input type="button" value="나의 기록에 저장" onclick="location.href='/log'">-->
+  <div>
+    <input type="image" src="../static/img/smile.png" value="😃">
+    <input type="image" src="../static/img/pngwing.com.png" value="홈으로" onclick="location.href='/main'">
+    <input type="image" src="../static/img/back-arrow.png" value="뒤로" onclick="history.back()">
+  </div>
+</footer>
+</body>
+</html>

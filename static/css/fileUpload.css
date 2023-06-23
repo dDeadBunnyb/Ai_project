@@ -1,0 +1,36 @@
+img
+{
+    width:50%;
+    height:50%;
+}
+
+div
+{
+}
+
+#file
+{
+    display: none;
+}
+
+#sub
+{
+    display: none;
+}
+
+#upload-btn
+{
+    border: 1px solid #ddd;
+    padding: 6px 12px;
+    display: inline-block;
+    cursor: pointer;
+
+}
+
+#anal-btn
+{
+    border: 1px solid #ddd;
+    padding: 6px 12px;
+    display: none;
+    cursor: pointer;
+}

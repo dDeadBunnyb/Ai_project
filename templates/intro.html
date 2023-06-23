@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta name="viewport" content="width=device-width,initial-scale=1" charset="UTF-8">
+    <script src="../static/js/check.js"></script>
+    <link rel="stylesheet" href="../static/css/intro.css">
+    <title>식비</title>
+</head>
+<body>
+<script language="JavaScript">
+		var SetTime = 1.5;		// 최초 설정 시간(기본 : 초)
+		function msg_time()// 1초씩 카운트
+        {
+			SetTime--;					// 1초씩 감소
+
+			if (SetTime < 0) // 시간이 종료 되었으면
+            {
+				clearInterval(tid);		// 타이머 해제
+				location.replace('/login')
+			}
+		}
+		window.onload = function TimerStart(){ tid=setInterval('msg_time()',1000) };
+</script>
+<header>
+    <div class = "wave top-wave1"></div>
+     <div class = "wave top-wave2"></div>
+     <div class = "wave top-wave3"></div>
+     <div class = "wave top-wave4"></div>
+</header>
+<section>
+
+
+    <img style="display: block; margin: auto; max-width:100%;height:auto"  src='../static/img/logo.png'>
+
+
+</section>
+<footer>
+    <div class = "wave wave1"></div>
+    <div class = "wave wave2"></div>
+    <div class = "wave wave3"></div>
+    <div class = "wave wave4"></div>
+</footer>
+</body>
+</html>

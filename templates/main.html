@@ -1,0 +1,43 @@
+{% with messages = get_flashed_messages() %}
+  {% if messages %}
+    <script>
+        alert(" {{messages [-1]}}")
+    </script>
+  {% endif %}
+{% endwith %}
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta name="viewport" content="width=device-width,initial-scale=1" charset="UTF-8">
+    <script src="../static/js/check.js"></script>
+    <link rel="stylesheet" href="../static/css/main.css">
+    <title>식비</title>
+    <style>
+    div
+    {
+        text-align:center;
+    }
+    </style>
+</head>
+<body>
+<header>
+    <h1>식비</h1>
+</header>
+<form action = "/analy" method = "post"  id = "main">
+    <input type="hidden" id = "sub" name = "sub" value="">
+    <div><input type="button" id = "ingre" class = "mainbtn" value="재료분석" onclick="ingreanal()"></div>
+    <div><input type="button" id = "nutri" class = "mainbtn" value="영양분석" onclick="nutrianal()"></div>
+    <div><input type="button" class = "mainbtn" value="나의기록" onclick="location.href='/log'"></div>
+    <div><input type="button" class = "mainbtn" value="마이 페이지" onclick="location.href='/mypage'"></div>
+    <div><input type="button" class = "mainbtn" value="로그아웃" onclick="location.href = '/logout'"></div>
+</form>
+<footer>
+<!--  <input type="button" value="나의 기록에 저장" onclick="location.href='/log'">-->
+  <div>
+    <input type="image" src="../static/img/smile.png" value="😃">
+    <input type="image" src="../static/img/pngwing.com.png" value="홈으로" onclick="location.href='/main'">
+    <input type="image" src="../static/img/back-arrow.png" value="뒤로" onclick="history.back()">
+  </div>
+</footer>
+</body>
+</html>

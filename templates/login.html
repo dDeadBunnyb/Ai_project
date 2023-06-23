@@ -1,0 +1,43 @@
+{% with messages = get_flashed_messages() %}
+  {% if messages %}
+    <script>
+        alert(" {{messages [-1]}}")
+    </script>
+  {% endif %}
+{% endwith %}
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta name="viewport" content="width=device-width,initial-scale=1" charset="UTF-8">
+    <script src="../static/js/check.js"></script>
+    <link rel="stylesheet" href="../static/css/main.css">
+    <link rel="stylesheet" href="../static/css/intro.css">
+    <title>식비</title>
+</head>
+<body>
+<header>
+    <div class = "wave top-wave1"></div>
+    <div class = "wave top-wave2"></div>
+    <div class = "wave top-wave3"></div>
+    <div class = "wave top-wave4"></div>
+</header>
+<section>
+    <form id = "login" action = "/main" method="post" onsubmit="return loginC()">
+        <div class="text">ID</div>
+        <div><input type = text class="input" name = 'id'></div>
+        <div class = "invalid-note" id="checkid">아이디를 입력해 주세요</div>
+        <div class="text">PW</div>
+        <div><input type = password class="input" name = 'pw'></div>
+        <div class = "invalid-note" id = "checkpw">비밀번호를 입력해 주세요</div>
+        <div><input type="submit" id="cbtn" value="로그인"></div>
+        <div id = ><a href="/finder">아이디</a>/<a href="/findpw">비밀번호 찾기</a><a href="/register">회원가입</a></div>
+    </form>
+</section>
+<footer>
+    <div class = "wave wave1"></div>
+    <div class = "wave wave2"></div>
+    <div class = "wave wave3"></div>
+    <div class = "wave wave4"></div>
+</footer>
+</body>
+</html>
